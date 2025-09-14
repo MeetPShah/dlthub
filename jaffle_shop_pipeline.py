@@ -144,7 +144,6 @@ def run_pipeline():
         logger.info("Pipeline completed successfully")
         # Access LoadInfo object properties correctly
         logger.info(f"Load info: {info}")
-        logger.info(f"Pipeline name: {info.pipeline_name}")
         return info
     except Exception as e:
         logger.error(f"Pipeline failed: {str(e)}")
