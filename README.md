@@ -22,7 +22,13 @@ cd dlthub
 pip install -r requirements.txt
 ```
 
-3. Set up environment variables (optional):
+3. Configuration:
+The pipeline is configured using the `.dlt/config.toml` file, which specifies:
+- Database configuration (DuckDB)
+- Schema settings
+- Runtime configuration
+
+You can also override settings with environment variables:
 ```bash
 export DLT_DESTINATION=duckdb  # or your preferred destination
 export DLT_DATASET=jaffle_shop  # or your preferred dataset name

@@ -22,9 +22,13 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         
+    - name: Create DLT directories
+      run: |
+        mkdir -p .dlt/duckdb
+
     - name: Run pipeline
       env:
-        DLT_DESTINATION: ${{ secrets.DLT_DESTINATION }}
-        DLT_DATASET: ${{ secrets.DLT_DATASET }}
+        DLT_DESTINATION: "duckdb"
+        DLT_DATASET: "jaffle_shop"
       run: |
         python jaffle_shop_pipeline.py

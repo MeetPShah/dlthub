@@ -1,0 +1,8 @@
+# Default configuration for the pipeline
+[runtime]
+log_level = "INFO"
+
+# DuckDB destination configuration
+[destination.duckdb]
+database = "jaffle_shop.duckdb"
+schema = "jaffle_shop"

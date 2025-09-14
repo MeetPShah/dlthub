@@ -1,2 +1,3 @@
 dlt[duckdb]>=0.3.5
 requests>=2.31.0
+psutil>=5.9.0
