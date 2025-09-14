@@ -142,7 +142,9 @@ def run_pipeline():
         logger.info(f"Running pipeline with destination={destination}, dataset={dataset_name}")
         info = pipeline.run(jaffle_shop_fast())
         logger.info("Pipeline completed successfully")
-        logger.info(f"Loaded tables: {list(info.get('loads_ids', {}).keys())}")
+        # Access LoadInfo object properties correctly
+        logger.info(f"Load info: {info}")
+        logger.info(f"Pipeline name: {info.pipeline_name}")
         return info
     except Exception as e:
         logger.error(f"Pipeline failed: {str(e)}")
